@@ -5,7 +5,13 @@ import BookRoutes from "./routes/BookRoutes.js";
 import cors from "cors";
 const app = express();
 // middleware for parsing request body
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://book-store-frontend-psi-gray.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 dotenv.config();
 mongoose
