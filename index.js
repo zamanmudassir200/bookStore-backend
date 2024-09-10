@@ -7,7 +7,7 @@ const app = express();
 // middleware for parsing request body
 app.use(
   cors({
-    origin: ["https://book-store-frontend-psi-gray.vercel.app/"],
+    origin: "https://book-store-frontend-psi-gray.vercel.app/",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
